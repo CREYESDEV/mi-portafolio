@@ -1,62 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristian Reyes | Portafolio</title>
+  <meta name="description" content="Portafolio de Cristian Reyes: proyectos, blog y contacto." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Hola, soy Cristian Reyes</h1>
-    <p>Desarrollador web</p>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">CR</a>
+
+      <nav class="nav">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#blog">Blog</a>
+        <a class="btn btn-small" href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="inicio">
-    <h2>Bienvenido a mi portafolio</h2>
-    <p>Aquí compartiré mi aprendizaje y mis proyectos como desarrollador web.</p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge">Portafolio en construcción</p>
+          <h1>Hola, soy <span class="accent">Cristian Reyes</span> 👋</h1>
+          <p class="lead">
+            Estoy aprendiendo desarrollo web y aquí muestro mis avances, proyectos
+            y entradas cortas sobre lo que voy aprendiendo.
+          </p>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Estoy empezando en el desarrollo web y me apasiona aprender cosas nuevas.</p>
-  </section>
+          <div class="hero-actions">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-ghost" href="#blog">Leer el blog</a>
+          </div>
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <p>Pronto encontrarás aquí mis primeros proyectos.</p>
-  </section>
+          <div class="links">
+            <a href="https://github.com/CREYESDEV" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <span>·</span>
+            <a href="#" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          </div>
+        </div>
 
+        <aside class="card">
+          <h2 class="card-title">Stack actual</h2>
+          <p class="muted">Enfoque: bases sólidas y proyectos pequeños.</p>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Git/GitHub</span>
+          </div>
+        </aside>
+      </div>
+    </section>
 
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p class="muted">
+          Estoy empezando en el desarrollo web y me apasiona aprender cosas nuevas.
+          Mi meta es crear un portafolio sólido con proyectos reales.
+        </p>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puedes escribirme a: <a href="mailto:tuemail@example.com">crixreyes7@gmail.com</a></p>
-  </section>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Lo que practico</h3>
+            <ul>
+              <li>Diseño responsive</li>
+              <li>Buenas prácticas con Git</li>
+              <li>Componentes reutilizables</li>
+              <li>Mejorar UI/UX en cada versión</li>
+            </ul>
+          </div>
 
-  <section id="blog" class="seccion">
-  <h2>Blog</h2>
-  <div id="blog-lista"></div>
-</section>
+          <div class="panel">
+            <h3>Objetivo</h3>
+            <ul>
+              <li>Publicar proyectos cada mes</li>
+              <li>Mejorar diseño y accesibilidad</li>
+              <li>Aprender y documentar el proceso</li>
+              <li>Empezar a trabajar como freelancer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Proyectos</h2>
+          <p class="muted">Aquí iré agregando mis proyectos conforme avance.</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Cristian Reyes</p>
+        <div class="cards">
+          <article class="project">
+            <div class="project-top">
+              <h3>Proyecto 1</h3>
+              <span class="tag">HTML/CSS</span>
+            </div>
+            <p class="muted">Descripción corta del proyecto (qué hace y qué aprendiste).</p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Demo</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3>Proyecto 2</h3>
+              <span class="tag">JS</span>
+            </div>
+            <p class="muted">Descripción corta del proyecto (problema → solución).</p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Demo</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">
+              <h3>Proyecto 3</h3>
+              <span class="tag">En progreso</span>
+            </div>
+            <p class="muted">Qué estás construyendo ahora y qué sigue.</p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Blog</h2>
+          <p class="muted">Entradas cortas sobre lo que voy aprendiendo.</p>
+        </div>
+
+        <div id="blog-lista" class="blog-grid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2>Contacto</h2>
+            <p class="muted">¿Quieres colaborar o hablar? Escríbeme.</p>
+          </div>
+
+          <div class="panel">
+            <p class="muted">Email</p>
+            <a class="email" href="mailto:crixreyes7@gmail.com">crixreyes7@gmail.com</a>
+            <div class="contact-actions">
+              <a class="btn btn-small" href="mailto:crixreyes7@gmail.com">Enviar correo</a>
+              <a class="btn btn-small btn-ghost" href="https://github.com/CREYESDEV" target="_blank" rel="noreferrer noopener">
+                Ver GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cristian Reyes</p>
+      <p class="muted">Hecho con HTML + CSS</p>
+    </div>
   </footer>
 
-  <script src="js/blog.js"></script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/blog.js" defer></script>
 </body>
-
-
-
 </html>
