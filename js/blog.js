@@ -2,17 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.getElementById("blog-lista");
   if (!blogContainer) return;
 
-  const entradas = ["entradas/entrada1.json"];
+  // OJO: tu carpeta se llama "Entradas" (E mayúscula)
+  const entradas = ["Entradas/entrada1.json"];
 
-  entradas.forEach(async (archivo, index) => {
+  entradas.forEach(async (archivo) => {
     try {
       const res = await fetch(archivo, { cache: "no-store" });
       if (!res.ok) throw new Error(`No se pudo cargar ${archivo} (HTTP ${res.status})`);
 
       const data = await res.json();
 
-      // tu JSON usa "titulo"
-      const titulo = data.titulo ?? "Sin título";
+      // Tu JSON usa "Título" (con tilde). Esto lo soporta.
+      const titulo = data.titulo ?? data.Titulo ?? data["Título"] ?? "Sin título";
       const fecha = data.fecha ?? "";
       const resumen = data.resumen ?? "";
       const contenidoHTML = data.contenido ?? "";
@@ -45,9 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(err);
       const div = document.createElement("div");
       div.className = "entrada";
-      div.innerHTML = `<h3>Error</h3><p>No pude cargar: <b>${archivo}</b></p>`;
+      div.innerHTML = `
+        <h3>Error</h3>
+        <p>No pude cargar: <b>${archivo}</b></p>
+        <p class="muted">${String(err.message || err)}</p>
+      `;
       blogContainer.appendChild(div);
     }
   });
 });
+
 
